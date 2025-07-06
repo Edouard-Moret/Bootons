@@ -9,6 +9,6 @@ def index():
         # appel XML-RPC vers votre instance Odoo
         client = xmlrpc.client.ServerProxy('https://bootons-test.odoo.com/xmlrpc/2/object')
         # exécution d’une méthode…
-        result = client.execute_kw('db', 2, 'password', 'res.partner', 'search', [[]])
+        result = client.execute_kw('bootons-test', 2, 'pass4api', 'res.partner', 'search', [[]])
         return f"Résultat : {result}"
     return render_template('index.html')  # bouton dans un petit form
